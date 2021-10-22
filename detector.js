@@ -6,7 +6,7 @@
 // @author       You
 // @match        https://*.fantazm.net/*
 // @grant        GM.xmlHttpRequest
-// @require http://code.jquery.com/jquery-3.4.1.min.js
+// @require      http://code.jquery.com/jquery-3.4.1.min.js
 // ==/UserScript==
 
 (function(){
