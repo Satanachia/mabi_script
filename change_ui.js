@@ -34,12 +34,14 @@
     // 매번 두탕뛰기 클릭 귀찮아서 만듬
     $multiview.removeClass('closeContent').css({right: 'auto', left: 0, bottom: 0, width: 'auto'});
 
-    // 메뉴바 흔들거림 삭제
-    $('li.dropdown').each((i, e) => {
+   // 메뉴바 흔들거림 삭제
+    $('.nav.navbar-nav>li').each((i, e) => {
         let $e = $(e);
         let w = $e.find('.dropdown-menu2').width();
         $e.width(w);
-        if(($e.find("a:contains('레이드')").length)) $e.prependTo('.nav.navbar-nav')
+        if(($e.find("a:contains('레이드')").length)) {
+            $e.prependTo('.nav.navbar-nav');
+        }
     });
 
     //$multiview.find('.multiRaidViewBtn').remove();
