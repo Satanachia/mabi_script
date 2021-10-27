@@ -93,7 +93,7 @@
                     chat.style.color = '#ff0000';
                     chat.style['font-weight'] = 'bold';
 
-                    addLog('<tr><td style="min-width: 70px">'+ dtFormat.format(d) +'</td><td style="color: '+(line.classList.contains('myLine') ? 'red' : 'black')+'; width: 100%; text-overflow: ellipsis; white-space: nowrap;">'+t_valid+'</td></tr>');
+                    addLog('<tr><td style="min-width: 70px">'+ dtFormat.format(d) +'</td><td style=" text-overflow: ellipsis; white-space: nowrap; color: '+(line.classList.contains('myLine') ? 'red' : 'black')+'; width: 100%;">'+t_valid+'</td></tr>');
                 } else if(/^[0-9]+$/.test(text)) {
                     chat.style.color = 'purple';
                     chat.style['font-weight'] = 'bold';
