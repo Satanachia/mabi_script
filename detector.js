@@ -24,10 +24,8 @@
 
     document.getElementsByTagName('body')[0].click(); // sound hook!
     
-    var wrapWidth = $('.wrap')[0].width;
-
     let logHtml = '';
-    logHtml += '<div style="width: '+wrapWidth+'px;">';
+    logHtml += '<div style="width: 228px;">';
     logHtml += '  <div style="display: flex; align-items: flex-end;"><div style="margin-right: auto;">로그 (파랑:거뿔,빨강:내제보)</div><div class="chat-ico ui-clear-log">청소</div></div>';
     logHtml += '  <table style="width:100%;">';
     logHtml += '    <thead><tr style="display:flex;"><th style="width: 70px;">시간</th><th style="width: 100%">내용</th></tr></thead>';
