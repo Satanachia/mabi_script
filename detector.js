@@ -27,7 +27,7 @@
     let logHtml = '';
     logHtml += '<div style="width: 100%">';
     logHtml += '  <div style="display: flex; align-items: flex-end;"><div style="margin-right: auto;">로그 (파랑:거뿔,빨강:내제보)</div><div class="chat-ico ui-clear-log">청소</div></div>';
-    logHtml += '  <table style="width: 228px;">';
+    logHtml += '  <table style="width: 100%;">';
     logHtml += '    <thead><tr style="display:flex;"><th style="width: 70px;">시간</th><th style="width: 100%">내용</th></tr></thead>';
     logHtml += '    <tbody class="ui-log" style="display:block; overflow-y:auto; height: 210px; border: 1px solid black;"></tbody>';
     logHtml += '  </table>';
@@ -54,8 +54,6 @@
             mutations[i].addedNodes.forEach(n => {
                 var node = n.cloneNode(true);
                 node.lastElementChild.style.color='blue';
-                node.lastElementChild.style.textOverflow='ellipsis';
-                node.lastElementChild.style.whiteSpace='nowrap';
                 addLog(node);
             })
         };
@@ -95,12 +93,12 @@
                     chat.style.color = '#ff0000';
                     chat.style['font-weight'] = 'bold';
 
-                    addLog('<tr><td style="min-width: 70px">'+ dtFormat.format(d) +'</td><td style="text-overflow: ellipsis; white-space: nowrap; color: '+(line.classList.contains('myLine') ? 'red' : 'black')+'; width: 100%;">'+t_valid+'</td></tr>');
+                    addLog('<tr><td style="min-width: 70px">'+ dtFormat.format(d) +'</td><td style="color: '+(line.classList.contains('myLine') ? 'red' : 'black')+'; width: 100%;">'+t_valid+'</td></tr>');
                 } else if(/^[0-9]+$/.test(text)) {
                     chat.style.color = 'purple';
                     chat.style['font-weight'] = 'bold';
 
-                    addLog('<tr><td style="min-width: 70px">'+ dtFormat.format(d) +'</td><td style="text-overflow: ellipsis; white-space: nowrap; color: purple; width: 100%">'+ text +'</td></tr>');
+                    addLog('<tr><td style="min-width: 70px">'+ dtFormat.format(d) +'</td><td style="color: purple; width: 100%">'+ text +'</td></tr>');
                 }
                 chat = undefined;
             }
