@@ -54,6 +54,8 @@
             mutations[i].addedNodes.forEach(n => {
                 var node = n.cloneNode(true);
                 node.lastElementChild.style.color='blue';
+                node.lastElementChild.style.textOverflow='ellipsis';
+                node.lastElementChild.style.whiteSpace='nowrap'; 
                 addLog(node);
             })
         };
@@ -98,7 +100,7 @@
                     chat.style.color = 'purple';
                     chat.style['font-weight'] = 'bold';
 
-                    addLog('<tr><td style="min-width: 70px">'+ dtFormat.format(d) +'</td><td style="color: purple; width: 100%">'+ text +'</td></tr>');
+                    addLog('<tr><td style="min-width: 70px">'+ dtFormat.format(d) +'</td><td style="text-overflow: ellipsis; white-space: nowrap; color: purple; width: 100%">'+ text +'</td></tr>');
                 }
                 chat = undefined;
             }
