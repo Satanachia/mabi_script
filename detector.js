@@ -55,7 +55,8 @@
                 var node = n.cloneNode(true);
                 node.lastElementChild.style.color='blue';
                 node.lastElementChild.style.textOverflow='ellipsis';
-                node.lastElementChild.style.whiteSpace='nowrap'; 
+                node.lastElementChild.style.whiteSpace='nowrap';
+                node.lastElementChild.style.width='70px';
                 addLog(node);
             })
         };
