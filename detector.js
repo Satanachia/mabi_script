@@ -13,7 +13,8 @@
     'use strict';
 
     //var raid_valid = /\d{1,2}[gGㅎ화홍qQㅂ블aㅁ모tTㅅ사실샌vVㅍ평dDㅇ위아악]/;
-    var raid_valid = /\d{1,2}[채]{0,1}[gGㅎ화qQㅂ블aAㅁ모tTㅅ실dDㅇ위아]/;
+    //var raid_valid = /\d{1,2}[채]{0,1}[gGㅎ화qQㅂ블aAㅁ모tTㅅ실dDㅇ위아]/;
+    var raid_valid = /\d/;
     var ring = new Audio('https://fantazm.net/mabi/sound/newgall/memo/ring.mp3');
     var line;
     var chat;
@@ -83,7 +84,7 @@
                 var created = chat.parentElement.getAttribute('created');
                 var d = new Date(created * 1e3);
 
-                text = chat.textContent.replace(/\s/g, '');
+                text = chat.textContent;//.replace(/\s/g, '');
 
                 t_valid = undefined;
                 if(text.startsWith('http')) break;
